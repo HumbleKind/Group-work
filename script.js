@@ -51,8 +51,8 @@ searchForm.on("submit", function (event) {
 async function searchForTeamData(city) {
     try {
         const responses = await Promise.all([
-            fetch(`https://cors-anywhere.herokuapp.com/http://api.isportsapi.com/sport/basketball/team/search?api_key=${apiKey5}&name=${city}`),
-            fetch(`https://cors-anywhere.herokuapp.com/http://api.isportsapi.com/sport/basketball/schedule?api_key=${apiKey5}&leagueId=111`)
+            fetch(`https://cors-anywhere.herokuapp.com/http://api.isportsapi.com/sport/basketball/team/search?api_key=${apiKey7}&name=${city}`),
+            fetch(`https://cors-anywhere.herokuapp.com/http://api.isportsapi.com/sport/basketball/schedule?api_key=${apiKey7}&leagueId=111`)
         ]);
 
         const [teamSearchResults, schedule] = await Promise.all(responses.map(response => response.json()));
