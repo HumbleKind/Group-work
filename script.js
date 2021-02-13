@@ -8,9 +8,9 @@ const apiKey3 = "0uzEF34YYjTbHstM";
 const apiKey4 = "wFO2Vj7ud4ZRBpCa";
 // Michael's iSports API key: EXPIRED
 const apiKey5 = "OpV33oLoEsvyd08B";
-// Michael's second iSports API key: 
+// Michael's second iSports API key:
 const apiKey6 = "hXIoG3unSr5PFboi";
-// Michael's third iSports API key: EXPIRED
+// Michael's third iSports API key:
 const apiKey7 = "OhHGQTk2RHGzu5Tp";
 // Chirstian's Pexels API key: 
 const apiKeyPexels = "563492ad6f91700001000001fc2a789fa0864115a147ac0879147312";
@@ -51,8 +51,8 @@ searchForm.on("submit", function (event) {
 async function searchForTeamData(city) {
     try {
         const responses = await Promise.all([
-            fetch(`https://cors-anywhere.herokuapp.com/http://api.isportsapi.com/sport/basketball/team/search?api_key=${apiKey2}&name=${city}`),
-            fetch(`https://cors-anywhere.herokuapp.com/http://api.isportsapi.com/sport/basketball/schedule?api_key=${apiKey2}&leagueId=111`)
+            fetch(`https://cors-anywhere.herokuapp.com/http://api.isportsapi.com/sport/basketball/team/search?api_key=${apiKey7}&name=${city}`),
+            fetch(`https://cors-anywhere.herokuapp.com/http://api.isportsapi.com/sport/basketball/schedule?api_key=${apiKey7}&leagueId=111`)
         ]);
 
         const [teamSearchResults, schedule] = await Promise.all(responses.map(response => response.json()));
